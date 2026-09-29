@@ -9,14 +9,21 @@ public class Tabeller {
 		for (int i = 0; i < 3; i++){
 			System.out.println(tabell[i]);
 		}
+		
 
 	}
 
 	// b)
 	public static String tilStreng(int[] tabell) {
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden tilStreng ikke implementert");
+		String [] bokstav = new String[tabell.length];
+
+		for(int i = 0; i < tabell.length; i++){
+			bokstav[i] = String.valueOf(tabell[i]);
+		}
+		
+		return bokstav;
+
 	}
 
 	// c)
