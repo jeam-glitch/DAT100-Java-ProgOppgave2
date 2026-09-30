@@ -6,15 +6,14 @@ public class Tabeller {
 	public static void skrivUt(int[] tabell) {
 
 		// TODO
-		for (int i = 0; i < 3; i++){
+		for (int i = 0; i < tabell.length; i++){
 			System.out.println(tabell[i]);
 		}
-		
 
 	}
 
 	// b)
-	public static String tilStreng(int[] tabell) {
+	public static String[] tilStreng(int[] tabell) {
 
 		String [] bokstav = new String[tabell.length];
 
