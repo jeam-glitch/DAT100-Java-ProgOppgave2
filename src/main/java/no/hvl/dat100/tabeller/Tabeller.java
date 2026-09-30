@@ -1,5 +1,7 @@
 package no.hvl.dat100.tabeller;
 
+import static java.lang.System.out;
+
 public class Tabeller {
 
 	// a)
@@ -7,7 +9,7 @@ public class Tabeller {
 
 		// TODO
 		for (int i = 0; i < tabell.length; i++){
-			System.out.println(tabell[i]);
+			out.println(tabell[i]);
 		}
 
 	}
