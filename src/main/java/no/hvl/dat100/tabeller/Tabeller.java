@@ -1,6 +1,6 @@
 package no.hvl.dat100.tabeller;
 
-import static java.lang.System.out;
+import java.util.Arrays;
 
 public class Tabeller {
 
@@ -8,59 +8,77 @@ public class Tabeller {
 	public static void skrivUt(int[] tabell) {
 
 		// TODO
-		for (int i = 0; i < tabell.length; i++){
-			out.println(tabell[i]);
+		for (int i = 0; i < 3; i++){
+			System.out.println(tabell[i]);
 		}
+		
 
 	}
 
-	// b)
-	public static String[] tilStreng(int[] tabell) {
+	// b) ferdig
+	public static String tilStreng(int[] tabell) {
 
-		String [] bokstav = new String[tabell.length];
-
-		for(int i = 0; i < tabell.length; i++){
-			bokstav[i] = String.valueOf(tabell[i]);
-		}
-		
+		String bokstav;
+		bokstav = Arrays.toString(tabell).replace(", ", ",");
 		return bokstav;
 
 	}
 
-	// c)
+	// c) ferdig
 	public static int summer(int[] tabell) {
+		int sum = 0;
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden summer ikke implementert");
+		for(int i = 0; i < tabell.length; i++){
+			sum += tabell[i];
+		}
+		return sum;
 	}
 
-	// d)
+	// d) ferdig
 	public static boolean finnesTall(int[] tabell, int tall) {
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden finnesTall ikke implementert");
+		boolean tallFinnes = false;
 
+		for(int i = 0; i < tabell.length; i++){
+			if(tall == tabell[i]){
+				tallFinnes = true;
+			}
+		}
+		return tallFinnes;
 	}
 
-	// e)
+	// e) ferdig
 	public static int posisjonTall(int[] tabell, int tall) {
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden posisjonTall ikke implementert");
+		int index = -1;
+		for(int i = 0; i < tabell.length; i++){
+			if (tall == tabell[i]){
+				index = i;
+				break;
+			}
+		}
+		return index;
 	}
 
-	// f)
+	// f) ferdig
 	public static int[] reverser(int[] tabell) {
-
-		// TODO
-		throw new UnsupportedOperationException("Metoden reverser ikke implementert");
+		int[] reverse = new int[tabell.length];
+		for(int i = 0; i < tabell.length; i++){
+			reverse[i] = tabell[tabell.length - i - 1];
+		}
+		return reverse;
 	}
 
 	// g)
 	public static boolean erSortert(int[] tabell) {
-
-		// TODO
-		throw new UnsupportedOperationException("Metoden erSortert ikke implementert");
+		boolean sorter = true;
+		for(int i = 1; i < tabell.length; i++){
+			if(tabell[i] < tabell[i - 1]){
+				sorter = false;
+				break;
+			}
+		}
+		return sorter;
 	}
 
 	// h)
