@@ -8,7 +8,7 @@ public class Tabeller {
 	public static void skrivUt(int[] tabell) {
 
 		// TODO
-		for (int i = 0; i < 3; i++){
+		for (int i = 0; i < tabell.length; i++){
 			System.out.println(tabell[i]);
 		}
 		
@@ -83,9 +83,14 @@ public class Tabeller {
 
 	// h)
 	public static int[] settSammen(int[] tabell1, int[] tabell2) {
-
-		// TODO
-		throw new UnsupportedOperationException("Metoden settSammen ikke implementert");
-
+		int[] tabell = new int[tabell1.length + tabell2.length];
+		for(int i = 0; i < (tabell1.length + tabell2.length);i++){
+			if(i < tabell1.length)
+			tabell[i] = tabell1[i];
+			else{
+				tabell[i] = tabell2[i -tabell1.length];
+			}
+		}
+		return tabell;
 	}
 }
