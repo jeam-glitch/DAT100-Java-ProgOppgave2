@@ -15,7 +15,7 @@ public class Tabeller {
 
 	}
 
-	// b)
+	// b) ferdig
 	public static String tilStreng(int[] tabell) {
 
 		String bokstav;
@@ -24,7 +24,7 @@ public class Tabeller {
 
 	}
 
-	// c)
+	// c) ferdig
 	public static int summer(int[] tabell) {
 		int sum = 0;
 
@@ -34,12 +34,17 @@ public class Tabeller {
 		return sum;
 	}
 
-	// d)
+	// d) ferdig
 	public static boolean finnesTall(int[] tabell, int tall) {
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden finnesTall ikke implementert");
+		boolean tallFinnes = false;
 
+		for(int i = 0; i < tabell.length; i++){
+			if(tall == tabell[i]){
+				tallFinnes = true;
+			}
+		}
+		return tallFinnes;
 	}
 
 	// e)
