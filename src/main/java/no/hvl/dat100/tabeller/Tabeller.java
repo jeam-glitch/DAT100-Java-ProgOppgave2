@@ -71,9 +71,14 @@ public class Tabeller {
 
 	// g)
 	public static boolean erSortert(int[] tabell) {
-
-		// TODO
-		throw new UnsupportedOperationException("Metoden erSortert ikke implementert");
+		boolean sorter = true;
+		for(int i = 1; i < tabell.length; i++){
+			if(tabell[i] < tabell[i - 1]){
+				sorter = false;
+				break;
+			}
+		}
+		return sorter;
 	}
 
 	// h)
