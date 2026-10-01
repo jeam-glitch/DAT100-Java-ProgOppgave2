@@ -26,9 +26,12 @@ public class Tabeller {
 
 	// c)
 	public static int summer(int[] tabell) {
+		int sum = 0;
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden summer ikke implementert");
+		for(int i = 0; i < tabell.length; i++){
+			sum += tabell[i];
+		}
+		return sum;
 	}
 
 	// d)
