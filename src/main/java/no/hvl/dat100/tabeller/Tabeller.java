@@ -1,6 +1,6 @@
 package no.hvl.dat100.tabeller;
 
-import static java.lang.System.out;
+import java.util.Arrays;
 
 public class Tabeller {
 
@@ -8,21 +8,18 @@ public class Tabeller {
 	public static void skrivUt(int[] tabell) {
 
 		// TODO
-		for (int i = 0; i < tabell.length; i++){
-			out.println(tabell[i]);
+		for (int i = 0; i < 3; i++){
+			System.out.println(tabell[i]);
 		}
+		
 
 	}
 
 	// b)
-	public static String[] tilStreng(int[] tabell) {
+	public static String tilStreng(int[] tabell) {
 
-		String [] bokstav = new String[tabell.length];
-
-		for(int i = 0; i < tabell.length; i++){
-			bokstav[i] = String.valueOf(tabell[i]);
-		}
-		
+		String bokstav;
+		bokstav = Arrays.toString(tabell).replace(", ", ",");
 		return bokstav;
 
 	}
